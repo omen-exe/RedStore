@@ -356,6 +356,34 @@
         </div>
     </div>
 
+    <div class="chat-widget">
+        <button class="chat-btn" onclick="toggleChat()">💬 Chat with Us</button>
+        <div id="chatBox" class="chat-box">
+            <p>Hello! How can we assist you today?</p>
+            <input type="text" placeholder="Type your message...">
+            <button>Send</button>
+        </div>
+    </div>
+    <!-- Chat Button -->
+<button class="chat-button" id="chatButton">Chat with us</button>
+
+<!-- Chat Widget -->
+<div class="chat-widget" id="chatWidget">
+    <div class="chat-header">
+        Live Chat
+        <span class="close-chat" id="closeChat">&times;</span>
+    </div>
+    <div class="chat-body" id="chatBody">
+        <div class="message bot-message">Hello! How can I assist you?</div>
+    </div>
+    <div class="chat-footer">
+        <input type="text" id="chatInput" placeholder="Type a message...">
+        <button id="sendMessage">Send</button>
+    </div>
+</div>
+
+    
+
 <!-----js for toggle menu----->
     <script>
         var MenuItems = document.getElementById("MenuItems");
@@ -373,21 +401,8 @@
             }
         }
     </script>
-    <div class="chat-widget">
-        <button class="chat-btn" onclick="toggleChat()">💬 Chat with Us</button>
-        <div id="chatBox" class="chat-box">
-            <p>Hello! How can we assist you today?</p>
-            <input type="text" placeholder="Type your message...">
-            <button>Send</button>
-        </div>
-    </div>
     
-    <script>
-        function toggleChat() {
-            var chatBox = document.getElementById("chatBox");
-            chatBox.style.display = (chatBox.style.display === "block") ? "none" : "block";
-        }
-    </script>
+
     
 </body>
 </html>
