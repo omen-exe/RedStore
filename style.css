@@ -631,6 +631,97 @@ form a{
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+/* ===== Extra Cool Effects ===== */
+
+/* 1. Subtle Background Animation */
+@keyframes backgroundFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+    background-size: 400% 400%;
+    animation: backgroundFlow 10s ease infinite;
+}
+
+/* 2. Smooth Floating Effect for Images */
+img {
+    transition: transform 0.3s ease-in-out;
+}
+img:hover {
+    transform: scale(1.05);
+}
+
+/* 3. Gradient Border for Buttons */
+.btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #ff523b, #ff7b00);
+    transition: left 0.3s ease-in-out;
+    z-index: -1;
+}
+.btn:hover::before {
+    left: 0;
+}
+
+/* 4. Glowing Neon Effect on Links */
+a:hover {
+    text-shadow: 0 0 10px rgba(255, 82, 59, 0.8);
+}
+
+/* 5. Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ff523b;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* 6. Floating Animation for Chat Button */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+.chat-button {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* 7. Box Shadow Hover Effect */
+.col-4, .col-3, .col-5 {
+    transition: all 0.3s ease-in-out;
+}
+.col-4:hover, .col-3:hover, .col-5:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* 8. Button Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.btn:hover {
+    animation: pulse 0.5s infinite;
+}
+
 
 
 
