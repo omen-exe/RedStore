@@ -401,7 +401,26 @@
             }
         }
     </script>
-    
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var chatButton = document.getElementById("chatButton");
+        var chatWidget = document.getElementById("chatWidget");
+        var closeChat = document.getElementById("closeChat");
+
+        chatButton.addEventListener("click", function () {
+            chatWidget.style.display = "flex";
+            chatButton.style.display = "none";
+        });
+
+        closeChat.addEventListener("click", function () {
+            chatWidget.style.display = "none";
+            chatButton.style.display = "block";
+        });
+    });
+</script>
+
+
 
     
 </body>
