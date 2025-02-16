@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Main Content (Your website content goes here) -->
+    <div id="content" style="display: none;">
+        <!-- Your existing RedStore website content here -->
+    </div>
+    
     <div class="header">
     <div class="container">
         <div class="navbar">
@@ -73,6 +83,8 @@
         </div>
 
     </div> 
+    
+
 <!--FEATURED PRODUCTS-->
     <div class="small-container">
         <h2 class="title">Featured Products</h2>
@@ -419,6 +431,17 @@
         });
     });
 </script>
+
+<script>
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById("preloader").style.display = "none";
+            document.getElementById("content").style.display = "block";
+            setTimeout(() => document.getElementById("content").style.opacity = "1", 100);
+        }, 2000); // Adjust time (2000ms = 2 seconds)
+    };
+</script>
+
 
 
 
