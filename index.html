@@ -11,10 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- Preloader -->
+    <!--preloader-->
     <div id="preloader">
-        <div class="loader"></div>
+        <h1 class="brand-name">REDSTORE</h1>
     </div>
+    
+    <!-- Your website content starts here -->
+    <div id="main-content" style="display: none;">
+        <!-- Your existing website code -->
+    </div>
+    
     
     <!-- Main Content (Your website content goes here) -->
     <div id="content" style="display: none;">
@@ -474,6 +480,15 @@
     };
 </script>
 
+
+<script>
+    window.onload = function () {
+        setTimeout(function () {
+            document.getElementById("preloader").style.display = "none";
+            document.getElementById("main-content").style.display = "block";
+        }, 2000); // Adjust time if needed
+    };
+</script>
 
 
     
